@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: #fff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0f1629;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4da3ff;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    color: #4da3ff;
+}
+
+/* SECTION */
+.plans-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.plans-section h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.plans-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.plan-card {
+    background: #121a2e;
+    padding: 30px;
+    border-radius: 12px;
+    width: 280px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+}
+
+/* POPULAR PLAN */
+.popular {
+    border: 2px solid #4da3ff;
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #4da3ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* TEXT */
+.plan-card h2 {
+    margin-bottom: 10px;
+}
+
+.plan-card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.plan-card h3 span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.speed {
+    font-size: 18px;
+    color: #4da3ff;
+    margin-bottom: 15px;
+}
+
+/* LIST */
+.plan-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.plan-card ul li {
+    margin: 8px 0;
+    color: #ccc;
+}
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #4da3ff;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e7be6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f1629;
+    color: #aaa;
+}

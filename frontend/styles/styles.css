@@ -1,0 +1,160 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: #fff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0f1629;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4da3ff;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    color: #4da3ff;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(11,15,25,0.8), rgba(11,15,25,0.9)),
+                url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block; /* FIX */
+    padding: 12px 25px;
+    background: #4da3ff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e7be6;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #4da3ff;
+}
+
+/* FEATURES */
+.features {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #121a2e;
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* CTA (FIXED) */
+.cta {
+    text-align: center;
+    padding: 80px 20px; /* more spacing */
+    background: #121a2e;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.cta p {
+    margin-bottom: 25px; /* KEY FIX */
+    color: #aaa;
+    font-size: 15px;
+}
+
+.cta .btn {
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 5px 20px rgba(77, 163, 255, 0.3); /* premium look */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f1629;
+    color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}

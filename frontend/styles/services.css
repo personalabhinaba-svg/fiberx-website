@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: #fff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0f1629;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4da3ff;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    color: #4da3ff;
+}
+
+/* SECTION */
+.services-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.services-section h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 0 40px;
+}
+
+/* CARD */
+.service-card {
+    background: #121a2e;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ICON */
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.service-card h2 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 20px;
+    background: #4da3ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e7be6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .services-grid {
+        padding: 0 20px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f1629;
+    color: #aaa;
+}

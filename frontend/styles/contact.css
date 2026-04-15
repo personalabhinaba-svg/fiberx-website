@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: #fff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0f1629;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4da3ff;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    color: #4da3ff;
+}
+
+/* CONTACT SECTION */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 40px;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-left h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* FORM */
+.contact-right {
+    flex: 1;
+    background: #121a2e;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #1c2540;
+    color: #fff;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #4da3ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e7be6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f1629;
+    color: #aaa;
+}
