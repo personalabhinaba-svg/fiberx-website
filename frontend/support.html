@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Center - FiberX Broadband</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/support.css">
+</head>
+<body data-page="support">
+  <header id="site-header" class="header"></header>
+
+  <section class="hero-small">
+    <h1>Support Center</h1>
+    <p>We're here to help you 24/7</p>
+  </section>
+
+  <div class="container">
+    <!-- Quick Support Options -->
+    <section class="support-intro">
+      <div class="support-options">
+        <div class="support-option">
+          <div class="option-icon">📞</div>
+          <h3>Call Us</h3>
+          <p class="big-number">+91 98765 43210</p>
+          <p>Available 24/7</p>
+        </div>
+        <div class="support-option">
+          <div class="option-icon">📧</div>
+          <h3>Email Us</h3>
+          <p class="big-number">support@fiberx.com</p>
+          <p>Response within 2 hours</p>
+        </div>
+        <div class="support-option">
+          <div class="option-icon">💬</div>
+          <h3>Live Chat</h3>
+          <p>Chat widget at bottom right</p>
+          <button class="btn-small">Open Chat</button>
+        </div>
+        <div class="support-option">
+          <div class="option-icon">🎫</div>
+          <h3>Submit Ticket</h3>
+          <p>Track your issue status</p>
+          <button class="btn-small" onclick="showTicketForm()">Create Ticket</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find quick answers to common questions</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-category">
+          <h3>Getting Started</h3>
+          <div class="faq-items">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>How do I check if fiber is available in my area?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Simply go to our <a href="feasibility.html">Check Availability</a> page, enter your address and pincode, and we'll instantly show you if fiber is available at your location.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>What's the installation process?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>1. Place your order through our website 2. Choose your installation date 3. Our technician visits your location 4. We set up your connection 5. Speed test & activation. The whole process takes 24-48 hours.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>What do I need for installation?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>You'll need: 1. Accessible fiber line point 2. Power outlet near installation point 3. Basic interior routing (optional - technician can help) 4. Valid ID for verification 5. Contact phone number</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h3>Billing & Plans</h3>
+          <div class="faq-items">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>When will I be billed?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Billing starts from your installation date on a monthly cycle. First month is prorated if installation happens mid-month. You'll receive an invoice via email before each billing date.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>Can I change my plan?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes! You can upgrade or downgrade your plan anytime. Changes take effect immediately, and we'll adjust your billing accordingly. No fees or penalties for plan changes.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>What payment methods do you accept?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>We accept: Credit/Debit cards, Net banking, UPI, NEFT/RTGS, and Standing instructions for auto-payment. Choose what works best for you at checkout.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h3>Troubleshooting</h3>
+          <div class="faq-items">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>I'm getting low speeds. What can I do?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>First, try restarting your router. Check if other devices are using bandwidth. Test directly with ethernet cable. If speeds are still low, we guarantee your subscribed speed or we'll credit your account.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>My connection is down. What do I do?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>1. Check if the router is powered on 2. Restart your router 3. Check cables are connected 4. Call us at +91 98765 43210 5. We'll troubleshoot or send a technician. Expected resolution: 1-4 hours.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>Why is my router showing red/orange light?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Red/Orange light indicates connection issue. Try: 1. Power cycle the router 2. Check cable connections 3. Move closer to router 4. Check for interference from microwaves 5. Contact support if issue persists.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h3>Policies</h3>
+          <div class="faq-items">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>What's your cancellation policy?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>You can cancel anytime with no penalties. We'll accept cancellation requests via phone, email, or our portal. Final bill will be prepared based on usage till cancellation date.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>Do I have a data cap?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>No! All FiberX plans include unlimited data. No data caps, no throttling, no hidden limits. Use as much as you want at your subscribed speed.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h4>What if I move to a new location?</h4>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>We can help you transfer your service if fiber is available at your new address. There's no transfer fee. Contact us at least 7 days before your move to arrange this.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticket Submission -->
+    <section id="ticketSection" class="ticket-section hidden">
+      <div class="section-header">
+        <h2>Submit Support Ticket</h2>
+      </div>
+
+      <form id="ticketForm" class="ticket-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ticketEmail">Email Address *</label>
+            <input type="email" id="ticketEmail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="ticketPhone">Phone Number *</label>
+            <input type="tel" id="ticketPhone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="ticketSubject">Issue Subject *</label>
+          <input type="text" id="ticketSubject" name="subject" placeholder="Brief description of your issue" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ticketCategory">Issue Category *</label>
+          <select id="ticketCategory" name="category" required>
+            <option value="">Select category</option>
+            <option value="no_connection">No Connection</option>
+            <option value="slow_speed">Slow Speed</option>
+            <option value="disconnections">Frequent Disconnections</option>
+            <option value="billing">Billing Issue</option>
+            <option value="installation">Installation Question</option>
+            <option value="general">General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="ticketDescription">Detailed Description *</label>
+          <textarea id="ticketDescription" name="description" placeholder="Please describe your issue in detail" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group checkbox">
+          <label>
+            <input type="checkbox" name="consent" required>
+            I want to be contacted about this ticket
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary">Submit Ticket</button>
+        <button type="button" class="btn-secondary" onclick="hideTicketForm()">Cancel</button>
+      </form>
+    </section>
+
+    <!-- Speed Test -->
+    <section class="tools-section">
+      <div class="section-header">
+        <h2>Tools & Resources</h2>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <h3>Speed Test</h3>
+          <p>Check your current internet speed and verify you're getting the speed you're paying for.</p>
+          <button class="btn-primary" onclick="runSpeedTest()">Run Speed Test</button>
+        </div>
+
+        <div class="tool-card">
+          <h3>Troubleshooting Guide</h3>
+          <p>Step-by-step guides to fix common issues like no connection or slow speeds.</p>
+          <button class="btn-secondary" onclick="downloadGuide()">Download PDF</button>
+        </div>
+
+        <div class="tool-card">
+          <h3>Network Status</h3>
+          <p>Check if there are any outages or maintenance happening in your area.</p>
+          <button class="btn-secondary" onclick="checkStatus()">Check Status</button>
+        </div>
+
+        <div class="tool-card">
+          <h3>Bill Payment</h3>
+          <p>Pay your bill online instantly using multiple payment options.</p>
+          <button class="btn-primary" onclick="goToBilling()">Pay Now</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/support.js"></script>
+</body>
+</html>

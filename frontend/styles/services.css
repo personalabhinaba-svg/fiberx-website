@@ -1,0 +1,215 @@
+/**
+ * Services Page - Services.css
+ */
+
+.hero-small {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 4rem var(--spacing-lg) 2rem;
+  text-align: center;
+}
+
+.hero-small h1 {
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-small p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   SERVICES GRID
+   ============================================ */
+
+.services-full {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.section-header h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.service-full-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  border: 1px solid var(--gray-100);
+}
+
+.service-full-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.service-icon-large {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-lg);
+  display: inline-block;
+}
+
+.service-full-card h3 {
+  color: var(--dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-full-card p {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-list {
+  list-style: none;
+}
+
+.service-list li {
+  padding: var(--spacing-sm) 0;
+  color: var(--gray-600);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: 700;
+}
+
+/* ============================================
+   ADDITIONAL FEATURES
+   ============================================ */
+
+.added-services {
+  background: var(--light);
+  padding: var(--spacing-3xl) 0;
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-2xl) 0;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.feature-item {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background: white;
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--primary);
+}
+
+.feature-check {
+  min-width: 40px;
+  height: 40px;
+  background: var(--success);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.feature-text h4 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--dark);
+}
+
+.feature-text p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* ============================================
+   COMPARISON TABLE
+   ============================================ */
+
+.comparison-section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.comparison-table {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.comparison-table thead {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--spacing-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--gray-50);
+}
+
+.comparison-table td.highlight {
+  color: var(--success);
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--light);
+}
+
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--spacing-md);
+  }
+
+  .service-full-card {
+    padding: var(--spacing-lg);
+  }
+}

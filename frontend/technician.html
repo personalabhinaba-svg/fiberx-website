@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technician Panel - FiberX Broadband</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/technician.css">
+</head>
+<body data-page="technician" class="technician-page">
+  <div class="tech-layout">
+    <!-- Header -->
+    <header class="tech-header">
+      <div class="header-left">
+        <h1>🔧 Technician Panel</h1>
+        <p class="tech-name" id="techName">Field Operations Dashboard</p>
+      </div>
+      <div class="header-right">
+        <div class="tech-status">
+          <span class="status-indicator online"></span>
+          <span>Online</span>
+        </div>
+        <a href="index.html" class="btn-small">← Back</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="tech-main">
+      <!-- Tabs -->
+      <div class="tech-tabs">
+        <button class="tab-btn active" onclick="switchTechTab('jobs')">
+          📋 My Jobs (<span id="jobCount">0</span>)
+        </button>
+        <button class="tab-btn" onclick="switchTechTab('schedule')">
+          📅 Schedule
+        </button>
+        <button class="tab-btn" onclick="switchTechTab('profile')">
+          👤 Profile
+        </button>
+      </div>
+
+      <!-- Jobs Tab -->
+      <div id="jobs" class="tech-tab-content active">
+        <div class="jobs-header">
+          <h2>My Assigned Jobs</h2>
+          <div class="job-filters">
+            <button class="filter-btn" onclick="filterJobs('all')" data-filter="all">All</button>
+            <button class="filter-btn" onclick="filterJobs('pending')" data-filter="pending">Pending</button>
+            <button class="filter-btn" onclick="filterJobs('visiting')" data-filter="visiting">Visiting</button>
+            <button class="filter-btn" onclick="filterJobs('completed')" data-filter="completed">Completed</button>
+          </div>
+        </div>
+
+        <div id="jobsList" class="jobs-list"></div>
+      </div>
+
+      <!-- Schedule Tab -->
+      <div id="schedule" class="tech-tab-content">
+        <h2>Installation Schedule</h2>
+        <div id="scheduleContent"></div>
+      </div>
+
+      <!-- Profile Tab -->
+      <div id="profile" class="tech-tab-content">
+        <h2>My Profile</h2>
+        <div id="profileContent"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Job Detail Modal -->
+  <div id="jobModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeJobModal()">×</button>
+      <div id="jobDetails"></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/technician.js"></script>
+</body>
+</html>

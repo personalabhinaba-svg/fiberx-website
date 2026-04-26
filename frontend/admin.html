@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Control Center - FiberX Broadband</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body data-page="admin" class="admin-page">
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-logo">FiberX Admin</h2>
+        <p class="sidebar-subtitle">Control Center</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" onclick="switchTab('dashboard')" class="nav-item active" data-tab="dashboard">
+          📊 Dashboard
+        </a>
+        <a href="#" onclick="switchTab('leads')" class="nav-item" data-tab="leads">
+          📋 Leads Management
+        </a>
+        <a href="#" onclick="switchTab('offers')" class="nav-item" data-tab="offers">
+          🎁 Offers Engine
+        </a>
+        <a href="#" onclick="switchTab('plans')" class="nav-item" data-tab="plans">
+          📦 Plans
+        </a>
+        <a href="#" onclick="switchTab('technicians')" class="nav-item" data-tab="technicians">
+          👷 Technicians
+        </a>
+        <a href="#" onclick="switchTab('tickets')" class="nav-item" data-tab="tickets">
+          🎫 Support Tickets
+        </a>
+        <a href="#" onclick="switchTab('analytics')" class="nav-item" data-tab="analytics">
+          📈 Analytics
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="btn-small">← Back to Site</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <div class="admin-header">
+        <div class="header-top">
+          <h1>FiberX Admin Control Center</h1>
+          <div class="admin-user">
+            <span class="user-badge">👤 Admin</span>
+            <a href="index.html" class="btn-small">Logout</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-content">
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="tab-content active">
+          <h2>Dashboard Overview</h2>
+          <div class="dashboard-grid">
+            <div class="stat-card">
+              <div class="stat-label">Total Leads</div>
+              <div class="stat-value" id="statTotalLeads">0</div>
+              <div class="stat-trend">+12% this month</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Available Offers</div>
+              <div class="stat-value" id="statActiveOffers">0</div>
+              <div class="stat-trend">Active now</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Completed Orders</div>
+              <div class="stat-value" id="statCompletedJobs">0</div>
+              <div class="stat-trend">+8% this week</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Conversion Rate</div>
+              <div class="stat-value" id="statConversionRate">0%</div>
+              <div class="stat-trend">Target: 25%</div>
+            </div>
+          </div>
+
+          <div class="dashboard-section">
+            <h3>Recent Leads</h3>
+            <div id="recentLeads"></div>
+          </div>
+
+          <div class="dashboard-section">
+            <h3>Active Offers</h3>
+            <div id="activeOffers"></div>
+          </div>
+        </div>
+
+        <!-- Leads Management Tab -->
+        <div id="leads" class="tab-content">
+          <div class="tab-header">
+            <h2>Leads Management</h2>
+            <button class="btn-primary" onclick="showLeadFilters()">🔍 Filter</button>
+          </div>
+
+          <div id="leadsTable"></div>
+        </div>
+
+        <!-- Offers Engine Tab -->
+        <div id="offers" class="tab-content">
+          <div class="tab-header">
+            <h2>Offer Management</h2>
+            <button class="btn-primary" onclick="showCreateOfferForm()">+ New Offer</button>
+          </div>
+
+          <div id="offersTable"></div>
+          <div id="createOfferForm" class="form-modal hidden"></div>
+        </div>
+
+        <!-- Plans Tab -->
+        <div id="plans" class="tab-content">
+          <div class="tab-header">
+            <h2>Plan Management</h2>
+            <button class="btn-primary" onclick="showCreatePlanForm()">+ New Plan</button>
+          </div>
+
+          <div id="plansTable"></div>
+        </div>
+
+        <!-- Technicians Tab -->
+        <div id="technicians" class="tab-content">
+          <div class="tab-header">
+            <h2>Technician Management</h2>
+            <button class="btn-primary" onclick="showAssignJobForm()">+ Assign Job</button>
+          </div>
+
+          <div id="techniciansTable"></div>
+        </div>
+
+        <!-- Tickets Tab -->
+        <div id="tickets" class="tab-content">
+          <div class="tab-header">
+            <h2>Support Tickets</h2>
+          </div>
+
+          <div id="ticketsTable"></div>
+        </div>
+
+        <!-- Analytics Tab -->
+        <div id="analytics" class="tab-content">
+          <h2>Analytics & Reports</h2>
+
+          <div class="analytics-grid">
+            <div class="analytics-card">
+              <h3>Lead Trends (7 Days)</h3>
+              <div id="leadChart" class="chart-placeholder">
+                <p>Chart visualization would appear here</p>
+              </div>
+            </div>
+
+            <div class="analytics-card">
+              <h3>Conversion Pipeline</h3>
+              <div id="conversionChart" class="chart-placeholder">
+                <p>New → Checking → Available → Completed</p>
+              </div>
+            </div>
+
+            <div class="analytics-card">
+              <h3>Top Areas by Demand</h3>
+              <div id="areasChart" class="chart-placeholder">
+                <p>Geographic demand analysis</p>
+              </div>
+            </div>
+
+            <div class="analytics-card">
+              <h3>Revenue Metrics</h3>
+              <div class="revenue-metrics">
+                <div class="metric">
+                  <span>Monthly Revenue (Est):</span>
+                  <span class="value">₹5,24,000</span>
+                </div>
+                <div class="metric">
+                  <span>MRR Growth:</span>
+                  <span class="value text-success">+22%</span>
+                </div>
+                <div class="metric">
+                  <span>Customer Lifetime Value:</span>
+                  <span class="value">₹12,500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modals -->
+  <div id="offerModal" class="modal hidden"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

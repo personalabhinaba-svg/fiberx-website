@@ -1,0 +1,369 @@
+/**
+ * Feasibility Page - Feasibility.css
+ */
+
+.hero-small {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 4rem var(--spacing-lg) 2rem;
+  text-align: center;
+}
+
+.hero-small h1 {
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-small p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   FEASIBILITY SECTION
+   ============================================ */
+
+.feasibility-section {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  min-height: 500px;
+}
+
+.feasibility-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3xl);
+  box-shadow: var(--shadow-lg);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loading-state .loader {
+  width: 50px;
+  height: 50px;
+  margin: var(--spacing-2xl) auto;
+}
+
+.loading-state p {
+  color: var(--gray-600);
+}
+
+/* ============================================
+   SUCCESS STATE
+   ============================================ */
+
+.feasibility-success {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 50%;
+  font-size: 3rem;
+  color: var(--success);
+  margin-bottom: var(--spacing-lg);
+}
+
+.feasibility-success h2 {
+  color: var(--success);
+  margin-bottom: var(--spacing-md);
+}
+
+.feasibility-success > p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* ============================================
+   AVAILABILITY DETAILS
+   ============================================ */
+
+.availability-details {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-2xl) 0;
+  text-align: left;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.detail-value {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ============================================
+   PLANS SELECTION
+   ============================================ */
+
+.next-steps {
+  text-align: center;
+  margin: var(--spacing-2xl) 0;
+}
+
+.next-steps h3 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--dark);
+}
+
+.plans-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.plan-option {
+  background: white;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  text-align: center;
+}
+
+.plan-option:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.plan-option.recommended {
+  border-color: var(--primary);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.plan-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.plan-speed {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.plan-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--success);
+  margin-bottom: var(--spacing-lg);
+}
+
+.plan-option .btn-primary {
+  width: 100%;
+}
+
+/* ============================================
+   BENEFITS & NEXT STEPS
+   ============================================ */
+
+.benefits {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--success);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-align: left;
+  margin: var(--spacing-2xl) 0;
+}
+
+.benefits h3 {
+  color: var(--success);
+  margin-bottom: var(--spacing-md);
+}
+
+.benefits-list {
+  list-style: none;
+  margin: 0;
+}
+
+.benefits-list li {
+  padding: var(--spacing-sm) 0;
+  color: var(--gray-700);
+}
+
+/* ============================================
+   UNAVAILABLE STATE
+   ============================================ */
+
+.feasibility-unavailable {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.unavailable-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 50%;
+  font-size: 3rem;
+  color: var(--danger);
+  margin-bottom: var(--spacing-lg);
+}
+
+.feasibility-unavailable h2 {
+  color: var(--danger);
+  margin-bottom: var(--spacing-md);
+}
+
+.feasibility-unavailable > p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-2xl);
+  color: var(--gray-600);
+}
+
+/* ============================================
+   WAITLIST SECTION
+   ============================================ */
+
+.waitlist-section {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.waitlist-section h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.waitlist-section p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.waitlist-section .btn-primary {
+  display: inline-block;
+}
+
+/* ============================================
+   ALTERNATIVE OPTIONS
+   ============================================ */
+
+.alternative-options {
+  background: white;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.alternative-options h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.alternative-options p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.alternative-options .btn-secondary {
+  display: inline-block;
+}
+
+/* ============================================
+   EXPANSION TIMELINE
+   ============================================ */
+
+.expansion-timeline {
+  background: rgba(37, 99, 235, 0.1);
+  border-left: 4px solid var(--primary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.expansion-timeline h3 {
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ============================================
+   SUPPORT INFO
+   ============================================ */
+
+.support-info {
+  background: var(--light);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+}
+
+.support-info p {
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .feasibility-section {
+    padding: var(--spacing-lg);
+  }
+
+  .feasibility-success,
+  .feasibility-unavailable {
+    padding: var(--spacing-lg);
+  }
+
+  .plans-selection {
+    grid-template-columns: 1fr;
+  }
+
+  .availability-details {
+    padding: var(--spacing-md);
+  }
+
+  .detail-item {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
